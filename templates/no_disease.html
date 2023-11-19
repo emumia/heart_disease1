@@ -1,0 +1,60 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Result Of Heart Disease</title>
+    
+  
+    <link rel="stylesheet" href="{% static 'logout.css' %}">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <style>
+        body  {
+            background-image: url("{% static 'img/no_dss.svg' %}");
+            
+        }
+        .btn btn-success{
+            position: absolute;
+            top: 100px;
+            right: 100px;
+        }
+
+        div.hero {
+            position: absolute;
+            right:center;
+            margin: 390px 1300px; 
+
+           
+        }
+
+    </style>
+
+</head>
+<body>
+
+
+    <div class="navigation">
+  
+        <a class="button" href="{% url 'logout' %}">
+          <img src="{% static 'img/logout.svg' %}">
+        
+        <div class="logout">LOGOUT</div>
+      
+        </a>
+        
+      </div>
+      
+    <div class="hero"> 
+        <a href="{% url 'home' %}" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Re Check</a>
+    </div>
+
+      
+      
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  
+
+    
+</body>
+</html>

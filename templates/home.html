@@ -1,0 +1,319 @@
+{% load static %}
+<!Doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <title>Home Page</title>
+    <style>
+      body {
+        background-image: url("{% static 'img/bg.svg' %}");
+       }
+    </style>
+  </head>
+  <body>
+    <!--<div class="background">
+      <div class="shape"></div>
+      <div class="shape"></div>
+  </div>-->
+  <div class="home">
+  <form method="post" id="home" >
+      <h3>Check Your heart</h3>
+      {% csrf_token %} 
+   
+      <div class="home">
+      <label for="BMI" class="home">BMI</label>
+      <input type="text" id="BMI" name="BMI"> 
+      
+      </div>
+   <div class="home">
+      <label for="PhysicalHealth" class="home">PhysicalHealth</label>
+      <select id="PhysicalHealth" name="PhysicalHealth" class="home"> 
+         <option value="1" style='color:black'>1</option>
+         <option value="2" style='color:black'>2</option>
+         <option value="3" style='color:black'>3</option>
+         <option value="4" style='color:black'>4</option>
+         <option value="5" style='color:black'>5</option>
+         <option value="6" style='color:black'>6</option>
+         <option value="7" style='color:black'>7</option>
+         <option value="8" style='color:black'>8</option>
+         <option value="9" style='color:black'>9</option>
+         <option value="10" style='color:black'>10</option>
+         <option value="11" style='color:black'>11</option>
+         <option value="12" style='color:black'>12</option>
+         <option value="13" style='color:black'>13</option>
+         <option value="14" style='color:black'>14</option>
+         <option value="15" style='color:black'>15</option>
+         <option value="16" style='color:black'>16</option>
+         <option value="17" style='color:black'>17</option>
+         <option value="18" style='color:black'>18</option>
+         <option value="19" style='color:black'>19</option>
+         <option value="20" style='color:black'>20</option>
+         <option value="21" style='color:black'>21</option>
+         <option value="22" style='color:black'>22</option>
+         <option value="23" style='color:black'>23</option>
+         <option value="24" style='color:black'>24</option>
+         <option value="25" style='color:black'>25</option>
+         <option value="26" style='color:black'>26</option>
+         <option value="27" style='color:black'>27</option>
+         <option value="28" style='color:black'>28</option>
+         <option value="29" style='color:black'>29</option>
+         <option value="30" style='color:black'>30</option>
+      </select>
+   </div>
+   <div class="home">
+      <label for="MentalHealth">MentalHealth</label>
+      <select id="MentalHealth" name="MentalHealth" > 
+         <option value="1" style='color:black'>1</option>
+         <option value="2" style='color:black'>2</option>
+         <option value="3" style='color:black'>3</option>
+         <option value="4" style='color:black'>4</option>
+         <option value="5" style='color:black'>5</option>
+         <option value="6" style='color:black'>6</option>
+         <option value="7" style='color:black'>7</option>
+         <option value="8" style='color:black'>8</option>
+         <option value="9" style='color:black'>9</option>
+         <option value="10" style='color:black'>10</option>
+         <option value="11" style='color:black'>11</option>
+         <option value="12" style='color:black'>12</option>
+         <option value="13" style='color:black'>13</option>
+         <option value="14" style='color:black'>14</option>
+         <option value="15" style='color:black'>15</option>
+         <option value="16" style='color:black'>16</option>
+         <option value="17" style='color:black'>17</option>
+         <option value="18" style='color:black'>18</option>
+         <option value="19" style='color:black'>19</option>
+         <option value="20" style='color:black'>20</option>
+         <option value="21" style='color:black'>21</option>
+         <option value="22" style='color:black'>22</option>
+         <option value="23" style='color:black'>23</option>
+         <option value="24" style='color:black'>24</option>
+         <option value="25" style='color:black'>25</option>
+         <option value="26" style='color:black'>26</option>
+         <option value="27" style='color:black'>27</option>
+         <option value="28" style='color:black'>28</option>
+         <option value="29" style='color:black'>29</option>
+         <option value="30" style='color:black'>30</option>
+      </select>
+      </div>
+
+      <div class="home">
+      <label for="AgeCategory">AgeCategory</label>
+      <select id="AgeCategory" name="AgeCategory" > 
+         <option value="0" style='color:black'>18  to 24</option>
+         <option value="1" style='color:black'>25  to 29</option>
+         <option value="2" style='color:black'>30  to 34</option>
+         <option value="3" style='color:black'>35  to 39</option>
+         <option value="4" style='color:black'>40  to 44</option>
+         <option value="5" style='color:black'>45  to 49</option>
+         <option value="6" style='color:black'>50  to 54</option>
+         <option value="7" style='color:black'>55  to 59</option>
+         <option value="8" style='color:black'>60  to 64</option>
+         <option value="9" style='color:black'>65  to 69</option>
+         <option value="10" style='color:black'>70  to 74</option>
+         <option value="11" style='color:black'>75  to 79</option>
+         <option value="12" style='color:black'>80 or older</option>
+      </select>
+      </div>
+
+      <div class="home">
+         <label for="Diabeticy">Diabetic</label>
+      <select id="Diabetic" name="Diabetic" > 
+         <option value="0" style='color:black'>Yes</option>
+         <option value="1" style='color:black'>Yes(During Pregnancy )</option>
+         <option value="2" style='color:black'>NO (Borderline)</option>
+         <option value="3" style='color:black'>NO</option>
+      </select>
+      </div>
+
+
+      <div class="home">
+
+
+      <div class="home">
+         <label for="GenHealth">GenHealth</label>
+      <select id="GenHealth" name="GenHealth" > 
+         <option value="0" style='color:black'>Poor</option>
+         <option value="1" style='color:black'>Fair</option>
+         <option value="2" style='color:black'>Good</option>
+         <option value="3" style='color:black'>Very Good</option>
+         <option value="4" style='color:black'>Excellent</option>
+      </select>
+      </div>
+
+      <div class="home">
+         <label for="SleepTime">SleepTime</label>
+      <select id="SleepTime" name="SleepTime" > 
+         <option value="1" style='color:black'>1 hour</option>
+         <option value="2" style='color:black'>2 hour</option>
+         <option value="3" style='color:black'>3 hour</option>
+         <option value="4" style='color:black'>4 hour</option>
+         <option value="5" style='color:black'>5 hour</option>
+         <option value="6" style='color:black'>6 hour</option>
+         <option value="7" style='color:black'>7 hour</option>
+         <option value="8" style='color:black'>8 hour</option>
+         <option value="9" style='color:black'>9 hour</option>
+         <option value="10" style='color:black'>10 hour</option>
+         <option value="11" style='color:black'>11 hour</option>
+         <option value="12" style='color:black'>12 hour</option>
+         <option value="13" style='color:black'>13 hour</option>
+         <option value="14" style='color:black'>14 hour</option>
+         <option value="15" style='color:black'>15 hour</option>
+         <option value="16" style='color:black'>16 hour</option>
+         <option value="17" style='color:black'>17 hour</option>
+         <option value="18" style='color:black'>18 hour</option>
+         <option value="19" style='color:black'>19 hour</option>
+         <option value="20" style='color:black'>20 hour</option>
+         <option value="21" style='color:black'>21 hour</option>
+         <option value="22" style='color:black'>22 hour</option>
+         <option value="23" style='color:black'>23 hour</option>
+         <option value="24" style='color:black'>24 hour</option>
+         
+      </select>
+      </div>
+
+      <div class="home">
+         <label for="Smoking">Smoking</label>
+      <select id="Smoking" name="Smoking" > 
+         <option value="1" style='color:black'>Yes</option>
+         <option value="0" style='color:black'>No</option>
+      </select>
+      </div>
+
+      <div class="home">
+         <label for="Alcohol_Drinking">Alcohol_Drinking</label>
+      <select id="Alcohol_Drinking" name="Alcohol_Drinking" > 
+         <option value="1" style='color:black'>Yes</option>
+         <option value="0" style='color:black'>No</option>
+      </select>
+
+      </div>
+      
+      <div class="home">
+         <label for="Stroke">Stroke</label>
+      <select id="AStroke" name="Stroke" > 
+         <option value="1" style='color:black'>Yes</option>
+         <option value="0" style='color:black'>No</option>
+      </select>
+      
+      <div class="home">
+         <label for="Diffwalking">Diffwalking</label>
+      <select id="Diffwalking name="Diffwalking"> 
+         <option value="1" style='color:black'>Yes</option>
+         <option value="0" style='color:black'>No</option>
+      </select>
+
+      </div>
+
+      <div class="home">
+         <label for="Sex" class="home">Sex</label>
+      <select id="Sex" name="Sex" class="home"> 
+         <option value="0" style='color:black'>Male</option>
+         <option value="1" style='color:black'>Female</option>
+      </select>
+
+      </div>
+
+      <div class="home">
+         <label for="Race_Asian">Race_Asian</label>
+      <select id="Race_Asian" name="Race_Asian" > 
+         <option value="1" style='color:black'>Yes</option>
+         <option value="0" style='color:black'>No</option>
+      </select>
+
+      </div>
+
+
+      <div class="home">
+         <label for="Race_Black">Race_Black</label>
+      <select id="Race_Black" name="Race_Black" > 
+         <option value="1" style='color:black'>Yes</option>
+         <option value="0" style='color:black'>No</option>
+      </select>
+
+      </div>
+
+
+      <div class="home">
+         <label for="Race_Hispanic">Race_Hispanic</label>
+      <select id="Race_Hispanic" name="Race_Hispanic" > 
+         <option value="1" style='color:black'>Yes</option>
+         <option value="0" style='color:black'>No</option>
+      </select>
+
+      </div>
+
+
+      <div class="home">
+         <label for="Race_Other">Race_Other</label>
+      <select id="Race_Other" name="Race_Other" > 
+         <option value="1" style='color:black'>Yes</option>
+         <option value="0" style='color:black'>No</option>
+      </select>
+
+      </div>
+
+      <div class="home">
+         <label for="Race_White">Race_White</label>
+      <select id="Race_White" name="Race_White" > 
+         <option value="1" style='color:black'>Yes</option>
+         <option value="0" style='color:black'>No</option>
+      </select>
+
+      </div>
+
+      <div class="home">
+         <label for="PhysicalActivity">PhysicalActivity</label>
+      <select id="PhysicalActivity" name="PhysicalActivity" > 
+         <option value="1" style='color:black'>Yes</option>
+         <option value="0" style='color:black'>No</option>
+      </select>
+      </div>
+
+      <div class="home">
+         <label for="Asthma">Asthma</label>
+      <select id="Asthma" name="Asthma" > 
+         <option value="1" style='color:black'>Yes</option>
+         <option value="0" style='color:black'>No</option>
+      </select>
+      </div>
+
+      <div class="home">
+         <label for="KidneyDisease">KidneyDisease</label>
+      <select id="KidneyDisease" name="KidneyDisease" > 
+         <option value="1" style='color:black'>Yes</option>
+         <option value="0" style='color:black'>No</option>
+      </select>
+      </div>
+
+      <div class="home">
+         <label for="SkinCancer">Skin Cancer</label>
+      <select id="SkinCancer" name="SkinCancer" > 
+         <option value="1" style='color:black'>Yes</option>
+         <option value="0" style='color:black'>No</option>
+      </select>
+      </div>
+   
+
+      <button type="submit">Submit</button>
+      
+  </form>
+</div>
+    <div class="f1">
+      <a href="{% url 'logout' %}" class="btn btn-primary">Logout</a>
+    </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </body>
+</html>
